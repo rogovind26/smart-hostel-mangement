@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fee Status - Smart Hostel</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="dashboard-header">
+
+        <h1>💰 Fee Status</h1>
+
+        <div class="student-info">
+            <span>👨‍🎓 Student</span>
+            <a href="student-dashboard.html">Dashboard</a>
+        </div>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="dashboard-container">
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+
+            <h2>My Hostel Fee 💳</h2>
+
+            <p>
+                View your hostel fee details and payment status.
+            </p>
+
+        </section>
+
+
+        <!-- Fee Summary -->
+        <section class="fee-cards">
+
+            <div class="fee-card">
+                <div class="fee-icon">💰</div>
+                <span>Total Fee</span>
+                <strong id="totalFee">₹50,000</strong>
+            </div>
+
+            <div class="fee-card">
+                <div class="fee-icon">✅</div>
+                <span>Paid Amount</span>
+                <strong id="paidAmount">₹35,000</strong>
+            </div>
+
+            <div class="fee-card">
+                <div class="fee-icon">⏳</div>
+                <span>Pending Amount</span>
+             <strong id="pendingAmount">₹15,000</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Payment Details -->
+        <section class="fee-details-card">
+
+            <h2>📋 Payment Details</h2>
+
+            <div class="fee-info-grid">
+
+                <div class="fee-info-item">
+                    <span>Student ID</span>
+                    <strong id="feeStudentId">STU001</strong>
+                </div>
+
+                <div class="fee-info-item">
+                    <span>Student Name</span>
+                    <strong id="feeStudentName">Rahul Kumar</strong>
+                </div>
+
+                <div class="fee-info-item">
+                    <span>Academic Year</span>
+                    <strong>2026-27</strong>
+                </div>
+
+                <div class="fee-info-item">
+                    <span>Due Date</span>
+                    <strong>30-09-2026</strong>
+                </div>
+
+                <div class="fee-info-item">
+                    <span>Payment Status</span>
+                    <strong id="feePaymentStatus" class="fee-pending">
+                     🟡 Pending
+                     </strong>
+                     </div>
+
+                <div class="fee-info-item">
+                    <span>Last Payment</span>
+                    <strong>₹35,000</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Payment Notice -->
+        <section class="payment-notice">
+
+            <h3>⚠️ Payment Notice</h3>
+
+           <p id="paymentNotice">
+    Your pending hostel fee is ₹15,000.
+    Please pay the remaining amount before the due date.
+</p> 
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Smart Hostel Management System
+        </p>
+
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

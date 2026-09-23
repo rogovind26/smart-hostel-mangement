@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warden Dashboard - Smart Hostel</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+
+    <!-- Dashboard Header -->
+    <header class="dashboard-header">
+        <h1>🏠 Warden Dashboard</h1>
+
+        <div class="student-info">
+            <span>👤 Warden</span>
+            <a href="login.html">Logout</a>
+        </div>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard-container">
+
+        <section class="welcome-section">
+            <h2>Welcome, Warden 👋</h2>
+            <p>Manage hostel students, rooms, complaints and leave requests.</p>
+        </section>
+
+        <!-- Statistics -->
+        <section class="dashboard-cards">
+
+            <div class="dashboard-card">
+                <div class="card-icon">👨‍🎓</div>
+                <h3>Total Students</h3>
+                <p id="totalStudents">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-icon">🏠</div>
+                <h3>Total Rooms</h3>
+                <p id="totalRooms">60</p>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-icon">🛏️</div>
+                <h3>Available Bed</h3>
+                <p id="availableRooms">8</p>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-icon">📋</div>
+                <h3>Pending Leaves</h3>
+                <p id="pendingLeaves">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-icon">⚠️</div>
+                <h3>Pending Complaints</h3>
+             <p id="pendingComplaints">7</p>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-icon">💰</div>
+                <h3>Fee Pending</h3>
+                <p id="feePending">15</p>
+            </div>
+
+        </section>
+
+        <!-- Management Options -->
+        <section class="dashboard-cards">
+
+           <a href="student-management.html" class="dashboard-card management-link">
+        <div class="card-icon">👥</div>
+            <h3>Student Management</h3>
+            <p>Manage hostel students</p>
+         </a>
+
+        <a href="room-management.html" class="dashboard-card management-link">
+    <div class="card-icon">🏢</div>
+    <h3>Room Management</h3>
+    <p>Manage rooms and allocation</p>
+</a>
+
+          <a href="leave-management.html" class="dashboard-card management-link">
+
+    <div class="card-icon">📝</div>
+
+    <h3>Leave Management</h3>
+
+    <p>Approve or reject leave</p>
+
+</a>
+
+            <a href="complaint-management.html" class="dashboard-card management-link"> 
+    <div class="card-icon">📢</div> 
+    <h3>Complaint Management</h3> 
+    <p>Handle student complaints</p> 
+</a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Smart Hostel Management System</p>
+    </footer>
+
+    
+<script src="script.js"></script>
+</body>
+</html>

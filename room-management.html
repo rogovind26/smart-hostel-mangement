@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Room Management - Smart Hostel</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="dashboard-header">
+
+        <h1>🏠 Room Management</h1>
+
+        <div class="student-info">
+            <span>👤 Warden</span>
+            <a href="warden-dashboard.html">Dashboard</a>
+        </div>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="dashboard-container">
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+
+            <h2>Manage Hostel Rooms</h2>
+
+            <p>
+                Add, search and manage hostel room information.
+            </p>
+
+        </section>
+
+
+        <!-- Add Room Button -->
+        <div class="management-actions">
+
+            <button onclick="showRoomForm()">
+                ➕ Add New Room
+            </button>
+
+        </div>
+
+
+        <!-- Search Room -->
+        <section class="search-section">
+
+            <input
+                type="text"
+                id="roomSearch"
+                placeholder="🔍 Search room by room number..."
+                onkeyup="searchRoom()"
+            >
+
+        </section>
+
+
+        <!-- Add Room Form -->
+        <section id="roomForm" class="student-form">
+
+            <h2>Add New Room</h2>
+
+            <form id="addRoomForm">
+
+                <input
+                    type="text"
+                    id="roomNumber"
+                    placeholder="Room Number"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="roomCapacity"
+                    placeholder="Room Capacity"
+                    min="1"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="occupiedBeds"
+                    placeholder="Occupied Beds"
+                    min="0"
+                    required
+                >
+
+                <button type="submit">
+                    Add Room
+                </button>
+
+                <button
+                    type="button"
+                    onclick="hideRoomForm()"
+                >
+                    Cancel
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Room List -->
+        <section class="student-table-section">
+
+            <h2>Room List</h2>
+
+            <div class="table-container">
+
+                <table id="roomTable">
+
+                    <thead>
+
+                        <tr>
+                            <th>Room No.</th>
+                            <th>Capacity</th>
+                            <th>Occupied</th>
+                            <th>Available Beds</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="roomTableBody">
+
+                       
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Smart Hostel Management System
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

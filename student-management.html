@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management - Smart Hostel</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="dashboard-header">
+
+        <h1>👨‍🎓 Student Management</h1>
+
+        <div class="student-info">
+            <span>👤 Warden</span>
+            <a href="warden-dashboard.html">Dashboard</a>
+        </div>
+
+    </header>
+
+
+    <!-- Main Container -->
+    <main class="dashboard-container">
+
+        <!-- Page Heading -->
+        <section class="welcome-section">
+
+            <h2>Manage Students</h2>
+
+            <p>
+                Add, search and manage hostel student information.
+            </p>
+
+        </section>
+
+
+        <!-- Add Student Button -->
+        <div class="management-actions">
+
+            <button onclick="showStudentForm()">
+                ➕ Add New Student
+            </button>
+
+        </div>
+
+
+        <!-- Search Student -->
+        <section class="search-section">
+
+            <input
+                type="text"
+                id="studentSearch"
+                placeholder="🔍 Search student by name or ID..."
+                onkeyup="searchStudent()"
+            >
+
+        </section>
+
+
+        <!-- Add Student Form -->
+        <section id="studentForm" class="student-form">
+
+            <h2>Add New Student</h2>
+
+            <form id="addStudentForm">
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Student Name"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="studentId"
+                    placeholder="Student ID"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="studentEmail"
+                    placeholder="Email"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="studentRoom"
+                    placeholder="Room Number"
+                    required
+                >
+
+                <button type="submit">
+                    Add Student
+                </button>
+
+                <button
+                    type="button"
+                    onclick="hideStudentForm()"
+                >
+                    Cancel
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Students Table -->
+        <section class="student-table-section">
+
+            <h2>Student List</h2>
+
+            <div class="table-container">
+
+                <table id="studentTable">
+
+                    <thead>
+
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Room</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="studentTableBody">
+
+                        
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Smart Hostel Management System
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

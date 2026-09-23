@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mess Management - Smart Hostel</title>
+
+   
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="dashboard-header">
+
+        <h1>🍽️ Mess Management</h1>
+
+        <div class="student-info">
+            <span>👨‍🎓 Student</span>
+            <a href="student-dashboard.html">Dashboard</a>
+        </div>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="dashboard-container">
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+
+            <h2>Hostel Mess 🍽️</h2>
+
+            <p>
+                Check today's meal menu and weekly mess schedule.
+            </p>
+
+        </section>
+
+
+        <!-- Today's Menu -->
+        <section class="mess-section">
+
+            <h2>📅 Today's Menu</h2>
+
+            <div class="meal-grid">
+
+                <div class="meal-card">
+                    <div class="meal-icon">🍳</div>
+                    <h3>Breakfast</h3>
+                    <p id="breakfastMenu">Poha, Bread, Tea & Milk</p>
+                    <span>8:00 AM - 9:30 AM</span>
+                </div>
+
+                <div class="meal-card">
+                    <div class="meal-icon">🍛</div>
+                    <h3>Lunch</h3>
+                    <p id = "lunchMenu">Dal, Rice, Roti, Sabji & Salad</p>
+                    <span>12:30 PM - 2:00 PM</span>
+                </div>
+
+                <div class="meal-card">
+                    <div class="meal-icon">☕</div>
+                    <h3>Evening Snacks</h3>
+                    <p id="snacksMenu">Samosa & Tea</p>
+                    <span>5:00 PM - 6:00 PM</span>
+                </div>
+
+                <div class="meal-card">
+                    <div class="meal-icon">🍽️</div>
+                    <h3>Dinner</h3>
+                    <p id="dinnerMenu">Paneer, Dal, Rice, Roti & Salad</p>
+                    <span>7:30 PM - 9:00 PM</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Weekly Menu -->
+        <section class="mess-section">
+
+            <h2>📋 Weekly Mess Menu</h2>
+
+            <div class="table-container">
+
+                <table id="messTable">
+
+                    <thead>
+
+                        <tr>
+                            <th>Day</th>
+                            <th>Breakfast</th>
+                            <th>Lunch</th>
+                            <th>Dinner</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                        <td>Monday</td>
+                        <td id="mondayMenu">Poha, Tea & Milk</td>
+                        <td>Dal, Rice & Roti</td>
+                         <td>Paneer & Roti</td>
+                          </tr>
+
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>Paratha & Curd</td>
+                            <td>Rajma Rice</td>
+                            <td>Dal, Sabji & Roti</td>
+                        </tr>
+
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>Idli & Sambar</td>
+                            <td>Dal, Rice & Roti</td>
+                            <td>Mix Veg & Roti</td>
+                        </tr>
+
+                        <tr>
+                            <td>Thursday</td>
+                            <td>Poha & Milk</td>
+                            <td>Chole Rice</td>
+                            <td>Paneer & Roti</td>
+                        </tr>
+
+                        <tr>
+                            <td>Friday</td>
+                            <td>Paratha & Tea</td>
+                            <td>Dal, Rice & Sabji</td>
+                            <td>Dal Makhani & Roti</td>
+                        </tr>
+
+                        <tr>
+                            <td>Saturday</td>
+                            <td>Sandwich & Milk</td>
+                            <td>Veg Biryani & Raita</td>
+                            <td>Chole & Roti</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Paratha & Curd</td>
+                            <td>Special Thali</td>
+                            <td>Paneer & Pulao</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Mess Notice -->
+        <section class="mess-notice">
+
+            <h3>📢 Mess Notice</h3>
+
+            <p>
+                Students are requested to follow the mess timings
+                and maintain cleanliness in the dining area.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Smart Hostel Management System
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+<script>
+    document.getElementById("breakfastMenu").textContent =
+        "Poha & Tea";
+
+    document.getElementById("lunchMenu").textContent =
+        "Dal, Rice, Roti & Sabzi";
+
+    document.getElementById("snacksMenu").textContent =
+        "Samosa & Tea";
+
+    document.getElementById("dinnerMenu").textContent =
+        "Paneer, Dal, Rice, Roti & Salad";
+
+    document.getElementById("mondayMenu").textContent =
+        "Poha, Tea & Milk";
+</script>
+
+</body>
+
+</html>
