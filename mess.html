@@ -7,19 +7,24 @@
 
     <title>Mess Management - Smart Hostel</title>
 
-   
     <link rel="stylesheet" href="style.css">
-    
 </head>
 
-<body>
+<body class="student-page">
 
     <!-- Header -->
-    <header class="dashboard-header">
+    <header class="student-inner-header">
 
-        <h1>🍽️ Mess Management</h1>
+        <a href="student-dashboard.html" class="student-inner-brand">
+            <div class="student-inner-brand-icon">🍽️</div>
 
-        <div class="student-info">
+            <div>
+                <h1>Smart Hostel</h1>
+                <p>Mess Management</p>
+            </div>
+        </a>
+
+        <div class="student-inner-actions">
             <span>👨‍🎓 Student</span>
             <a href="student-dashboard.html">Dashboard</a>
         </div>
@@ -28,53 +33,156 @@
 
 
     <!-- Main Content -->
-    <main class="dashboard-container">
+    <main class="student-inner-main">
 
         <!-- Welcome Section -->
-        <section class="welcome-section">
+        <section class="student-inner-welcome">
 
-            <h2>Hostel Mess 🍽️</h2>
+            <div>
+                <span class="student-inner-badge">MESS MANAGEMENT</span>
 
-            <p>
-                Check today's meal menu and weekly mess schedule.
-            </p>
+                <h2>Hostel Mess 🍽️</h2>
+
+                <p>
+                    Check today's meal menu and weekly mess schedule.
+                </p>
+            </div>
+
+            <div class="student-inner-welcome-icon">
+                🍛
+            </div>
 
         </section>
 
 
         <!-- Today's Menu -->
-        <section class="mess-section">
+        <section class="student-info-card">
 
-            <h2>📅 Today's Menu</h2>
+            <div class="student-info-card-heading">
 
-            <div class="meal-grid">
-
-                <div class="meal-card">
-                    <div class="meal-icon">🍳</div>
-                    <h3>Breakfast</h3>
-                    <p id="breakfastMenu">Poha, Bread, Tea & Milk</p>
-                    <span>8:00 AM - 9:30 AM</span>
+                <div class="student-info-card-icon">
+                    📅
                 </div>
 
-                <div class="meal-card">
-                    <div class="meal-icon">🍛</div>
-                    <h3>Lunch</h3>
-                    <p id = "lunchMenu">Dal, Rice, Roti, Sabji & Salad</p>
-                    <span>12:30 PM - 2:00 PM</span>
+                <div>
+                    <span>TODAY'S MENU</span>
+                    <h3>Today's Meals</h3>
                 </div>
 
-                <div class="meal-card">
-                    <div class="meal-icon">☕</div>
-                    <h3>Evening Snacks</h3>
-                    <p id="snacksMenu">Samosa & Tea</p>
-                    <span>5:00 PM - 6:00 PM</span>
+            </div>
+
+
+            <div class="student-mess-meal-grid">
+
+                <!-- Breakfast -->
+                <div class="student-meal-card">
+
+                    <div class="student-meal-icon">
+                        🍳
+                    </div>
+
+                    <div class="student-meal-content">
+
+                        <span class="student-meal-label">
+                            BREAKFAST
+                        </span>
+
+                        <h4>Breakfast</h4>
+
+                        <p id="breakfastMenu">
+                            Poha, Bread, Tea & Milk
+                        </p>
+
+                        <span class="student-meal-time">
+                            🕐 8:00 AM - 9:30 AM
+                        </span>
+
+                    </div>
+
                 </div>
 
-                <div class="meal-card">
-                    <div class="meal-icon">🍽️</div>
-                    <h3>Dinner</h3>
-                    <p id="dinnerMenu">Paneer, Dal, Rice, Roti & Salad</p>
-                    <span>7:30 PM - 9:00 PM</span>
+
+                <!-- Lunch -->
+                <div class="student-meal-card">
+
+                    <div class="student-meal-icon">
+                        🍛
+                    </div>
+
+                    <div class="student-meal-content">
+
+                        <span class="student-meal-label">
+                            LUNCH
+                        </span>
+
+                        <h4>Lunch</h4>
+
+                        <p id="lunchMenu">
+                            Dal, Rice, Roti, Sabji & Salad
+                        </p>
+
+                        <span class="student-meal-time">
+                            🕐 12:30 PM - 2:00 PM
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Snacks -->
+                <div class="student-meal-card">
+
+                    <div class="student-meal-icon">
+                        ☕
+                    </div>
+
+                    <div class="student-meal-content">
+
+                        <span class="student-meal-label">
+                            EVENING SNACKS
+                        </span>
+
+                        <h4>Evening Snacks</h4>
+
+                        <p id="snacksMenu">
+                            Samosa & Tea
+                        </p>
+
+                        <span class="student-meal-time">
+                            🕐 5:00 PM - 6:00 PM
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Dinner -->
+                <div class="student-meal-card">
+
+                    <div class="student-meal-icon">
+                        🍽️
+                    </div>
+
+                    <div class="student-meal-content">
+
+                        <span class="student-meal-label">
+                            DINNER
+                        </span>
+
+                        <h4>Dinner</h4>
+
+                        <p id="dinnerMenu">
+                            Paneer, Dal, Rice, Roti & Salad
+                        </p>
+
+                        <span class="student-meal-time">
+                            🕐 7:30 PM - 9:00 PM
+                        </span>
+
+                    </div>
+
                 </div>
 
             </div>
@@ -83,33 +191,43 @@
 
 
         <!-- Weekly Menu -->
-        <section class="mess-section">
+        <section class="student-info-card">
 
-            <h2>📋 Weekly Mess Menu</h2>
+            <div class="student-info-card-heading">
 
-            <div class="table-container">
+                <div class="student-info-card-icon">
+                    📋
+                </div>
+
+                <div>
+                    <span>WEEKLY SCHEDULE</span>
+                    <h3>Weekly Mess Menu</h3>
+                </div>
+
+            </div>
+
+
+            <div class="student-mess-table-container">
 
                 <table id="messTable">
 
                     <thead>
-
                         <tr>
                             <th>Day</th>
                             <th>Breakfast</th>
                             <th>Lunch</th>
                             <th>Dinner</th>
                         </tr>
-
                     </thead>
 
                     <tbody>
 
                         <tr>
-                        <td>Monday</td>
-                        <td id="mondayMenu">Poha, Tea & Milk</td>
-                        <td>Dal, Rice & Roti</td>
-                         <td>Paneer & Roti</td>
-                          </tr>
+                            <td>Monday</td>
+                            <td id="mondayMenu">Poha, Tea & Milk</td>
+                            <td>Dal, Rice & Roti</td>
+                            <td>Paneer & Roti</td>
+                        </tr>
 
                         <tr>
                             <td>Tuesday</td>
@@ -163,14 +281,22 @@
 
 
         <!-- Mess Notice -->
-        <section class="mess-notice">
+        <section class="student-mess-notice">
 
-            <h3>📢 Mess Notice</h3>
+            <div class="student-mess-notice-icon">
+                📢
+            </div>
 
-            <p>
-                Students are requested to follow the mess timings
-                and maintain cleanliness in the dining area.
-            </p>
+            <div>
+                <span>MESS NOTICE</span>
+
+                <h3>Important Information</h3>
+
+                <p>
+                    Students are requested to follow the mess timings
+                    and maintain cleanliness in the dining area.
+                </p>
+            </div>
 
         </section>
 
@@ -178,7 +304,7 @@
 
 
     <!-- Footer -->
-    <footer>
+    <footer class="student-inner-footer">
 
         <p>
             © 2026 Smart Hostel Management System
@@ -186,24 +312,29 @@
 
     </footer>
 
+
     <script src="script.js"></script>
 
-<script>
-    document.getElementById("breakfastMenu").textContent =
-        "Poha & Tea";
 
-    document.getElementById("lunchMenu").textContent =
-        "Dal, Rice, Roti & Sabzi";
+    <!-- Mess Menu JavaScript -->
+    <script>
 
-    document.getElementById("snacksMenu").textContent =
-        "Samosa & Tea";
+        document.getElementById("breakfastMenu").textContent =
+            "Poha & Tea";
 
-    document.getElementById("dinnerMenu").textContent =
-        "Paneer, Dal, Rice, Roti & Salad";
+        document.getElementById("lunchMenu").textContent =
+            "Dal, Rice, Roti & Sabzi";
 
-    document.getElementById("mondayMenu").textContent =
-        "Poha, Tea & Milk";
-</script>
+        document.getElementById("snacksMenu").textContent =
+            "Samosa & Tea";
+
+        document.getElementById("dinnerMenu").textContent =
+            "Paneer, Dal, Rice, Roti & Salad";
+
+        document.getElementById("mondayMenu").textContent =
+            "Poha, Tea & Milk";
+
+    </script>
 
 </body>
 

@@ -10,127 +10,297 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+
+<body class="student-page">
+
 
     <!-- Header -->
-    <header class="dashboard-header">
+    <header class="student-inner-header">
 
-        <h1>💰 Fee Status</h1>
+        <a href="student-dashboard.html" class="student-inner-brand">
 
-        <div class="student-info">
+            <div class="student-inner-brand-icon">
+                💰
+            </div>
+
+            <div>
+                <h1>Smart Hostel</h1>
+                <p>Fee Status</p>
+            </div>
+
+        </a>
+
+
+        <div class="student-inner-actions">
+
             <span>👨‍🎓 Student</span>
-            <a href="student-dashboard.html">Dashboard</a>
+
+            <a href="student-dashboard.html">
+                Dashboard
+            </a>
+
         </div>
 
     </header>
 
 
+
     <!-- Main Content -->
-    <main class="dashboard-container">
+    <main class="student-inner-main">
 
-        <!-- Welcome Section -->
-        <section class="welcome-section">
 
-            <h2>My Hostel Fee 💳</h2>
+        <!-- Welcome -->
+        <section class="student-inner-welcome">
 
-            <p>
-                View your hostel fee details and payment status.
-            </p>
+            <div>
+
+                <span class="student-inner-badge">
+                    💰 FEE STATUS
+                </span>
+
+                <h2>
+                    My Hostel Fee
+                </h2>
+
+                <p>
+                    View your hostel fee details and payment status.
+                </p>
+
+            </div>
+
+
+            <div class="student-inner-welcome-icon">
+                💳
+            </div>
 
         </section>
+
 
 
         <!-- Fee Summary -->
-        <section class="fee-cards">
+        <section class="student-fee-summary">
 
-            <div class="fee-card">
-                <div class="fee-icon">💰</div>
-                <span>Total Fee</span>
-                <strong id="totalFee">₹50,000</strong>
+
+            <div class="student-fee-card">
+
+                <div class="student-fee-icon">
+                    💰
+                </div>
+
+                <div>
+
+                    <span>
+                        Total Fee
+                    </span>
+
+                    <strong id="totalFee">
+                        ₹50,000
+                    </strong>
+
+                </div>
+
             </div>
 
-            <div class="fee-card">
-                <div class="fee-icon">✅</div>
-                <span>Paid Amount</span>
-                <strong id="paidAmount">₹35,000</strong>
+
+
+            <div class="student-fee-card">
+
+                <div class="student-fee-icon">
+                    ✅
+                </div>
+
+                <div>
+
+                    <span>
+                        Paid Amount
+                    </span>
+
+                    <strong id="paidAmount">
+                        ₹35,000
+                    </strong>
+
+                </div>
+
             </div>
 
-            <div class="fee-card">
-                <div class="fee-icon">⏳</div>
-                <span>Pending Amount</span>
-             <strong id="pendingAmount">₹15,000</strong>
+
+
+            <div class="student-fee-card pending-fee-card">
+
+                <div class="student-fee-icon">
+                    ⏳
+                </div>
+
+                <div>
+
+                    <span>
+                        Pending Amount
+                    </span>
+
+                    <strong id="pendingAmount">
+                        ₹15,000
+                    </strong>
+
+                </div>
+
             </div>
+
 
         </section>
+
 
 
         <!-- Payment Details -->
-        <section class="fee-details-card">
+        <section class="student-info-card">
 
-            <h2>📋 Payment Details</h2>
 
-            <div class="fee-info-grid">
+            <div class="student-info-card-heading">
 
-                <div class="fee-info-item">
+                <div>
+
+                    <span>PAYMENT INFORMATION</span>
+
+                    <h2>
+                        📋 Payment Details
+                    </h2>
+
+                </div>
+
+
+                <div class="student-info-card-icon">
+                    💳
+                </div>
+
+            </div>
+
+
+
+            <div class="student-fee-info-grid">
+
+
+                <div class="student-room-item">
+
                     <span>Student ID</span>
-                    <strong id="feeStudentId">STU001</strong>
+
+                    <strong id="feeStudentId">
+                        STU001
+                    </strong>
+
                 </div>
 
-                <div class="fee-info-item">
+
+
+                <div class="student-room-item">
+
                     <span>Student Name</span>
-                    <strong id="feeStudentName">Rahul Kumar</strong>
+
+                    <strong id="feeStudentName">
+                        Rahul Kumar
+                    </strong>
+
                 </div>
 
-                <div class="fee-info-item">
+
+
+                <div class="student-room-item">
+
                     <span>Academic Year</span>
-                    <strong>2026-27</strong>
+
+                    <strong>
+                        2026-27
+                    </strong>
+
                 </div>
 
-                <div class="fee-info-item">
+
+
+                <div class="student-room-item">
+
                     <span>Due Date</span>
-                    <strong>30-09-2026</strong>
+
+                    <strong>
+                        30-09-2026
+                    </strong>
+
                 </div>
 
-                <div class="fee-info-item">
+
+
+                <div class="student-room-item">
+
                     <span>Payment Status</span>
-                    <strong id="feePaymentStatus" class="fee-pending">
-                     🟡 Pending
-                     </strong>
-                     </div>
 
-                <div class="fee-info-item">
-                    <span>Last Payment</span>
-                    <strong>₹35,000</strong>
+                    <strong
+                        id="feePaymentStatus"
+                        class="fee-pending"
+                    >
+                        🟡 Pending
+                    </strong>
+
                 </div>
+
+
+
+                <div class="student-room-item">
+
+                    <span>Last Payment</span>
+
+                    <strong>
+                        ₹35,000
+                    </strong>
+
+                </div>
+
 
             </div>
 
         </section>
 
 
+
         <!-- Payment Notice -->
-        <section class="payment-notice">
+        <section class="student-payment-notice">
 
-            <h3>⚠️ Payment Notice</h3>
+            <div class="student-payment-notice-icon">
+                ⚠️
+            </div>
 
-           <p id="paymentNotice">
-    Your pending hostel fee is ₹15,000.
-    Please pay the remaining amount before the due date.
-</p> 
+
+            <div>
+
+                <h3>
+                    Payment Notice
+                </h3>
+
+                <p id="paymentNotice">
+                    Your pending hostel fee is ₹15,000.
+                    Please pay the remaining amount before the due date.
+                </p>
+
+            </div>
 
         </section>
+
 
     </main>
 
 
+
     <!-- Footer -->
-    <footer>
+    <footer class="student-inner-footer">
 
         <p>
             © 2026 Smart Hostel Management System
         </p>
 
+        <p>
+            Student Portal • Fee Status
+        </p>
+
     </footer>
+
+
+
     <script src="script.js"></script>
 
 </body>

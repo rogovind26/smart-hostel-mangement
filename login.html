@@ -10,77 +10,195 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="login-page">
 
-    <header>
-        <h1>🏠 Smart Hostel Management</h1>
-        <p>Login to your account</p>
+    <!-- Header -->
+
+    <header class="login-header">
+
+        <a href="index.html" class="login-brand">
+
+            <div class="login-brand-icon">
+                🏠
+            </div>
+
+            <div>
+                <h1>Smart Hostel</h1>
+                <p>Management System</p>
+            </div>
+
+        </a>
+
+        <a href="index.html" class="back-home">
+            ← Home
+        </a>
+
     </header>
 
 
-    <main class="login-container">
+    <!-- Login Area -->
 
-        <div class="login-box">
+    <main class="login-main">
 
-            <h2>Welcome Back 👋</h2>
+        <div class="login-wrapper">
 
-            <p class="login-subtitle">
-                Login to access your hostel dashboard
-            </p>
+            <!-- Left Information -->
+
+            <section class="login-info">
+
+                <span class="login-badge">
+                    🔐 Secure Hostel Portal
+                </span>
+
+                <h2>
+                    Welcome<br>
+                    <span>Back!</span>
+                </h2>
+
+                <p>
+                    Login to access your hostel dashboard
+                    and manage everything from one place.
+                </p>
+
+                <div class="login-features">
+
+                    <div>
+                        <span>👨‍🎓</span>
+                        <p>
+                            Student Services
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>🏠</span>
+                        <p>
+                            Room Management
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>📋</span>
+                        <p>
+                            Requests & Complaints
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
 
 
-            <form id="loginForm">
+            <!-- Login Card -->
 
-                <label for="userType">Login As</label>
+            <section class="login-box">
 
-                <select id="userType">
-                    <option value="student">Student</option>
-                    <option value="warden">Warden / Admin</option>
-                </select>
+                <div class="login-card-icon">
+                    🔑
+                </div>
 
+                <h2>
+                    Sign In
+                </h2>
 
-                <label for="email">Email / Student ID</label>
-
-                <input
-                    type="text"
-                    id="email"
-                    placeholder="Enter your email or student ID"
-                    required
-                >
+                <p class="login-subtitle">
+                    Enter your details to continue
+                </p>
 
 
-                <label for="password">Password</label>
+                <form id="loginForm">
 
-                <input
-                    type="password"
-                    id="password"
-                    placeholder="Enter your password"
-                    required
-                >
+                    <label for="userType">
+                        Login As
+                    </label>
+
+                    <select id="userType">
+
+                        <option value="student">
+                            Student
+                        </option>
+
+                        <option value="warden">
+                            Warden / Admin
+                        </option>
+
+                    </select>
 
 
-                <button type="submit">
-                    Login
-                </button>
+                    <label for="email">
+                        Email / Student ID
+                    </label>
 
-            </form>
+                    <input
+                        type="text"
+                        id="email"
+                        placeholder="Enter your email or student ID"
+                        required
+                    >
 
 
-            <p id="loginMessage"></p>
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+                    >
 
 
-            <p class="register-text">
-                Don't have an account?
-                <a href="#">Register Now</a>
-            </p>
+                    <button type="submit">
+                        Login →
+                    </button>
+
+                </form>
+
+
+                <p id="loginMessage"></p>
+
+
+                <div class="login-demo">
+
+                    <span>💡 Demo Login</span>
+
+                    <p>
+                        Student: student@hostel.com
+                    </p>
+
+                    <p>
+                        Warden: admin@hostel.com
+                    </p>
+
+                </div>
+
+
+                <p class="register-text">
+                    Don't have an account?
+                    <a href="#">
+                        Register Now
+                    </a>
+                </p>
+
+            </section>
 
         </div>
 
     </main>
 
 
-    <footer>
-        <p>© 2026 Smart Hostel Management System</p>
+    <!-- Footer -->
+
+    <footer class="login-footer">
+
+        <p>
+            © 2026 Smart Hostel Management System
+        </p>
+
+        <p>
+            Built with HTML • CSS • JavaScript
+        </p>
+
     </footer>
 
 

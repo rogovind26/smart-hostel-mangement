@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,48 +10,96 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="management-page">
 
     <!-- Header -->
-    <header class="dashboard-header">
+    <header class="management-header">
 
-        <h1>👨‍🎓 Student Management</h1>
+        <a href="warden-dashboard.html" class="management-brand">
 
-        <div class="student-info">
+            <div class="management-brand-icon">
+                👨‍🎓
+            </div>
+
+            <div>
+                <h1>Smart Hostel</h1>
+                <p>Student Management</p>
+            </div>
+
+        </a>
+
+
+        <div class="management-header-actions">
+
             <span>👤 Warden</span>
-            <a href="warden-dashboard.html">Dashboard</a>
+
+            <a href="warden-dashboard.html">
+                Dashboard
+            </a>
+
         </div>
 
     </header>
 
 
-    <!-- Main Container -->
-    <main class="dashboard-container">
+    <!-- Main -->
+    <main class="management-main">
 
-        <!-- Page Heading -->
-        <section class="welcome-section">
 
-            <h2>Manage Students</h2>
+        <!-- Welcome -->
+        <section class="management-welcome">
 
-            <p>
-                Add, search and manage hostel student information.
-            </p>
+            <div>
+
+                <span class="management-badge">
+                    👨‍🎓 STUDENT MANAGEMENT
+                </span>
+
+                <h2>
+                    Manage Hostel Students
+                </h2>
+
+                <p>
+                    Add, search and manage hostel student
+                    information from one place.
+                </p>
+
+            </div>
+
+
+            <div class="management-welcome-icon">
+                👨‍🎓
+            </div>
 
         </section>
 
 
-        <!-- Add Student Button -->
-        <div class="management-actions">
+        <!-- Toolbar -->
+        <section class="management-toolbar">
 
-            <button onclick="showStudentForm()">
+            <div>
+
+                <span>STUDENT DIRECTORY</span>
+
+                <h2>
+                    Student List
+                </h2>
+
+            </div>
+
+
+            <button
+                class="modern-add-button"
+                onclick="showStudentForm()"
+            >
                 ➕ Add New Student
             </button>
 
-        </div>
+        </section>
 
 
-        <!-- Search Student -->
-        <section class="search-section">
+        <!-- Search -->
+        <section class="modern-search-section">
 
             <input
                 type="text"
@@ -63,80 +112,171 @@
 
 
         <!-- Add Student Form -->
-        <section id="studentForm" class="student-form">
+        <section
+            id="studentForm"
+            class="modern-management-form"
+        >
 
-            <h2>Add New Student</h2>
+            <div class="form-heading">
+
+                <div>
+
+                    <span>STUDENT DETAILS</span>
+
+                    <h2>
+                        Add New Student
+                    </h2>
+
+                </div>
+
+                <span class="form-icon">
+                    👤
+                </span>
+
+            </div>
+
 
             <form id="addStudentForm">
 
-                <input
-                    type="text"
-                    id="studentName"
-                    placeholder="Student Name"
-                    required
-                >
+                <div class="form-grid">
 
-                <input
-                    type="text"
-                    id="studentId"
-                    placeholder="Student ID"
-                    required
-                >
+                    <div class="form-group">
 
-                <input
-                    type="email"
-                    id="studentEmail"
-                    placeholder="Email"
-                    required
-                >
+                        <label for="studentName">
+                            Student Name
+                        </label>
 
-                <input
-                    type="text"
-                    id="studentRoom"
-                    placeholder="Room Number"
-                    required
-                >
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Example: Govind Kumar"
+                            required
+                        >
 
-                <button type="submit">
-                    Add Student
-                </button>
+                    </div>
 
-                <button
-                    type="button"
-                    onclick="hideStudentForm()"
-                >
-                    Cancel
-                </button>
+
+                    <div class="form-group">
+
+                        <label for="studentId">
+                            Student ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentId"
+                            placeholder="Example: STU001"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="studentEmail">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="studentEmail"
+                            placeholder="Example: student@email.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="studentRoom">
+                            Room Number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentRoom"
+                            placeholder="Example: 101"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-buttons">
+
+                    <button
+                        type="submit"
+                        class="save-management-button"
+                    >
+                        ✅ Add Student
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="cancel-management-button"
+                        onclick="hideStudentForm()"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
 
             </form>
 
         </section>
 
 
-        <!-- Students Table -->
-        <section class="student-table-section">
+        <!-- Student Table -->
+        <section class="modern-table-section">
 
-            <h2>Student List</h2>
+            <div class="table-heading">
 
-            <div class="table-container">
+                <div>
+
+                    <span>HOSTEL STUDENTS</span>
+
+                    <h2>
+                        All Students
+                    </h2>
+
+                </div>
+
+                <div class="table-heading-icon">
+                    👥
+                </div>
+
+            </div>
+
+
+            <div class="modern-table-container">
 
                 <table id="studentTable">
 
                     <thead>
 
                         <tr>
+
                             <th>Student ID</th>
+
                             <th>Name</th>
+
                             <th>Email</th>
+
                             <th>Room</th>
+
                             <th>Action</th>
+
                         </tr>
 
                     </thead>
 
-                    <tbody id="studentTableBody">
 
-                        
+                    <tbody id="studentTableBody">
 
                     </tbody>
 
@@ -150,10 +290,14 @@
 
 
     <!-- Footer -->
-    <footer>
+    <footer class="management-footer">
 
         <p>
             © 2026 Smart Hostel Management System
+        </p>
+
+        <p>
+            Warden Portal • Student Management
         </p>
 
     </footer>
@@ -162,4 +306,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>

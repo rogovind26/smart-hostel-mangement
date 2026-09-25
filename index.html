@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,54 +12,235 @@
 
 <body>
 
-    <header>
-        <h1>🏠 Smart Hostel Management System</h1>
-        <p>Manage Hostel Life Easily & Smartly</p>
+    <!-- ==============================
+         Header
+         ============================== -->
+
+    <header class="home-header">
+
+        <div class="brand">
+            <div class="brand-icon">🏠</div>
+
+            <div>
+                <h1>Smart Hostel</h1>
+                <p>Management System</p>
+            </div>
+        </div>
+
+        <a href="login.html" class="header-login">
+            Login
+        </a>
+
     </header>
 
-    <main class="container">
 
-        <section class="hero">
-            <h2>Welcome to Smart Hostel</h2>
-            <p>
-                A simple and smart platform to manage students,
-                rooms, complaints, leave requests and hostel services.
-            </p>
+    <!-- ==============================
+         Main Content
+         ============================== -->
 
-            <a href="login.html" class="start-button">Get Started</a>
+    <main class="home-container">
+
+        <!-- Hero Section -->
+
+        <section class="home-hero">
+
+            <div class="hero-content">
+
+                <span class="hero-badge">
+                    ✨ Smart • Simple • Connected
+                </span>
+
+                <h2>
+                    Manage Hostel Life
+                    <span>Smarter.</span>
+                </h2>
+
+                <p>
+                    A modern platform to manage students, rooms,
+                    leave requests, complaints and everyday hostel services
+                    from one place.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="login.html" class="start-button">
+                        Get Started →
+                    </a>
+
+                    <a href="#features" class="explore-button">
+                        Explore Features
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero Visual -->
+
+            <div class="hero-visual">
+
+                <div class="hostel-illustration">
+                    🏢
+                </div>
+
+                <div class="floating-card card-one">
+                    👨‍🎓
+                    <span>Students</span>
+                </div>
+
+                <div class="floating-card card-two">
+                    🛏️
+                    <span>Rooms</span>
+                </div>
+
+                <div class="floating-card card-three">
+                    📋
+                    <span>Requests</span>
+                </div>
+
+            </div>
+
         </section>
 
-        <section class="features">
 
-            <div class="card">
-                <h3>👨‍🎓 Student Management</h3>
-                <p>Manage student information easily.</p>
+        <!-- Features -->
+
+        <section class="home-features" id="features">
+
+            <div class="section-heading">
+
+                <span>HOSTEL SERVICES</span>
+
+                <h2>
+                    Everything in one place
+                </h2>
+
+                <p>
+                    Simple tools to make hostel management easier.
+                </p>
+
             </div>
 
-            <div class="card">
-                <h3>🛏️ Room Management</h3>
-                <p>Check room availability and allocation.</p>
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon student-icon">
+                        👨‍🎓
+                    </div>
+
+                    <h3>Student Management</h3>
+
+                    <p>
+                        Manage student information,
+                        rooms and personal details easily.
+                    </p>
+
+                    <span class="feature-number">01</span>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon room-icon">
+                        🛏️
+                    </div>
+
+                    <h3>Room Management</h3>
+
+                    <p>
+                        Track rooms, occupied beds
+                        and available space.
+                    </p>
+
+                    <span class="feature-number">02</span>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon complaint-icon">
+                        📢
+                    </div>
+
+                    <h3>Complaints</h3>
+
+                    <p>
+                        Submit complaints and
+                        track their resolution status.
+                    </p>
+
+                    <span class="feature-number">03</span>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon leave-icon">
+                        📅
+                    </div>
+
+                    <h3>Leave Requests</h3>
+
+                    <p>
+                        Apply for leave and receive
+                        approval from the warden.
+                    </p>
+
+                    <span class="feature-number">04</span>
+
+                </div>
+
             </div>
 
-            <div class="card">
-                <h3>📝 Complaints</h3>
-                <p>Submit and manage hostel complaints.</p>
+        </section>
+
+
+        <!-- Bottom CTA -->
+
+        <section class="home-cta">
+
+            <div>
+
+                <span>READY TO GET STARTED?</span>
+
+                <h2>
+                    Make hostel management smarter.
+                </h2>
+
             </div>
 
-            <div class="card">
-                <h3>📅 Leave Request</h3>
-                <p>Apply for leave online.</p>
-            </div>
+            <a href="login.html">
+                Login to Portal →
+            </a>
 
         </section>
 
     </main>
 
-    <footer>
-        <p>© 2026 Smart Hostel Management System</p>
+
+    <!-- Footer -->
+
+    <footer class="home-footer">
+
+        <p>
+            © 2026 Smart Hostel Management System
+        </p>
+
+        <p>
+            Built with HTML • CSS • JavaScript
+        </p>
+
     </footer>
+
 
     <script src="script.js"></script>
 
 </body>
+
 </html>

@@ -3,112 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Warden Dashboard - Smart Hostel</title>
+
     <link rel="stylesheet" href="style.css">
-    
 </head>
 
-<body>
+<body class="warden-dashboard-page">
 
-    <!-- Dashboard Header -->
-    <header class="dashboard-header">
-        <h1>🏠 Warden Dashboard</h1>
+    <!-- Warden Header -->
+    <header class="warden-dashboard-header">
 
-        <div class="student-info">
-            <span>👤 Warden</span>
-            <a href="login.html">Logout</a>
+        <a href="warden-dashboard.html" class="warden-brand">
+
+            <div class="warden-brand-icon">🏠</div>
+
+            <div>
+                <h1>Smart Hostel</h1>
+                <p>Warden Portal</p>
+            </div>
+
+        </a>
+
+
+        <div class="warden-header-actions">
+
+            <span class="warden-role">👤 Warden</span>
+
+            <a href="login.html" class="warden-logout">
+                Logout
+            </a>
+
         </div>
+
     </header>
 
+
     <!-- Main Dashboard -->
-    <main class="dashboard-container">
+    <main class="warden-dashboard-main">
 
-        <section class="welcome-section">
-            <h2>Welcome, Warden 👋</h2>
-            <p>Manage hostel students, rooms, complaints and leave requests.</p>
+
+        <!-- Welcome Section -->
+        <section class="warden-welcome">
+
+            <div>
+
+                <span class="warden-welcome-badge">
+                    🛡️ WARDEN PORTAL
+                </span>
+
+                <h2>
+                    Welcome, Warden! 👋
+                </h2>
+
+                <p>
+                    Manage hostel students, rooms, complaints,
+                    leaves and fee information from one place.
+                </p>
+
+            </div>
+
+
+            <div class="warden-welcome-icon">
+                🏢
+            </div>
+
         </section>
 
-        <!-- Statistics -->
-        <section class="dashboard-cards">
 
-            <div class="dashboard-card">
-                <div class="card-icon">👨‍🎓</div>
+        <!-- Statistics Heading -->
+        <section class="warden-section-heading">
+
+            <div>
+
+                <span>HOSTEL OVERVIEW</span>
+
+                <h2>
+                    Dashboard Statistics
+                </h2>
+
+            </div>
+
+            <p>
+                Quick overview of hostel activities
+            </p>
+
+        </section>
+
+
+        <!-- Statistics Cards -->
+        <section class="warden-stats-grid">
+
+
+            <div class="warden-stat-card">
+
+                <div class="warden-stat-top">
+
+                    <div class="warden-stat-icon students-icon">
+                        👨‍🎓
+                    </div>
+
+                    <span>01</span>
+
+                </div>
+
                 <h3>Total Students</h3>
+
                 <p id="totalStudents">0</p>
+
+                <small>
+                    Registered students
+                </small>
+
             </div>
 
-            <div class="dashboard-card">
-                <div class="card-icon">🏠</div>
+
+            <div class="warden-stat-card">
+
+                <div class="warden-stat-top">
+
+                    <div class="warden-stat-icon rooms-icon">
+                        🏠
+                    </div>
+
+                    <span>02</span>
+
+                </div>
+
                 <h3>Total Rooms</h3>
+
                 <p id="totalRooms">60</p>
+
+                <small>
+                    Hostel rooms
+                </small>
+
             </div>
 
-            <div class="dashboard-card">
-                <div class="card-icon">🛏️</div>
-                <h3>Available Bed</h3>
+
+            <div class="warden-stat-card">
+
+                <div class="warden-stat-top">
+
+                    <div class="warden-stat-icon beds-icon">
+                        🛏️
+                    </div>
+
+                    <span>03</span>
+
+                </div>
+
+                <h3>Available Beds</h3>
+
                 <p id="availableRooms">8</p>
+
+                <small>
+                    Beds currently available
+                </small>
+
             </div>
 
-            <div class="dashboard-card">
-                <div class="card-icon">📋</div>
+
+            <div class="warden-stat-card">
+
+                <div class="warden-stat-top">
+
+                    <div class="warden-stat-icon leave-icon">
+                        📋
+                    </div>
+
+                    <span>04</span>
+
+                </div>
+
                 <h3>Pending Leaves</h3>
+
                 <p id="pendingLeaves">0</p>
+
+                <small>
+                    Requests waiting
+                </small>
+
             </div>
 
-            <div class="dashboard-card">
-                <div class="card-icon">⚠️</div>
+
+            <div class="warden-stat-card">
+
+                <div class="warden-stat-top">
+
+                    <div class="warden-stat-icon complaint-icon">
+                        ⚠️
+                    </div>
+
+                    <span>05</span>
+
+                </div>
+
                 <h3>Pending Complaints</h3>
-             <p id="pendingComplaints">7</p>
+
+                <p id="pendingComplaints">7</p>
+
+                <small>
+                    Complaints to handle
+                </small>
+
             </div>
 
-            <div class="dashboard-card">
-                <div class="card-icon">💰</div>
+
+            <div class="warden-stat-card">
+
+                <div class="warden-stat-top">
+
+                    <div class="warden-stat-icon fee-icon">
+                        💰
+                    </div>
+
+                    <span>06</span>
+
+                </div>
+
                 <h3>Fee Pending</h3>
+
                 <p id="feePending">15</p>
+
+                <small>
+                    Students with pending fee
+                </small>
+
             </div>
 
         </section>
 
-        <!-- Management Options -->
-        <section class="dashboard-cards">
 
-           <a href="student-management.html" class="dashboard-card management-link">
-        <div class="card-icon">👥</div>
-            <h3>Student Management</h3>
-            <p>Manage hostel students</p>
-         </a>
+        <!-- Management Heading -->
+        <section class="warden-section-heading management-heading">
 
-        <a href="room-management.html" class="dashboard-card management-link">
-    <div class="card-icon">🏢</div>
-    <h3>Room Management</h3>
-    <p>Manage rooms and allocation</p>
-</a>
+            <div>
 
-          <a href="leave-management.html" class="dashboard-card management-link">
+                <span>HOSTEL MANAGEMENT</span>
 
-    <div class="card-icon">📝</div>
+                <h2>
+                    Management Services
+                </h2>
 
-    <h3>Leave Management</h3>
+            </div>
 
-    <p>Approve or reject leave</p>
+            <p>
+                Select a service to manage hostel activities
+            </p>
 
-</a>
+        </section>
 
-            <a href="complaint-management.html" class="dashboard-card management-link"> 
-    <div class="card-icon">📢</div> 
-    <h3>Complaint Management</h3> 
-    <p>Handle student complaints</p> 
-</a>
+
+        <!-- Management Cards -->
+        <section class="warden-management-grid">
+
+
+            <a
+                href="student-management.html"
+                class="warden-management-card"
+            >
+
+                <div class="warden-management-top">
+
+                    <div class="warden-management-icon">
+                        👥
+                    </div>
+
+                    <span>01</span>
+
+                </div>
+
+                <h3>
+                    Student Management
+                </h3>
+
+                <p>
+                    Add, edit, search and manage hostel student records.
+                </p>
+
+                <div class="warden-service-link">
+                    Manage Students →
+                </div>
+
+            </a>
+
+
+            <a
+                href="room-management.html"
+                class="warden-management-card"
+            >
+
+                <div class="warden-management-top">
+
+                    <div class="warden-management-icon">
+                        🏢
+                    </div>
+
+                    <span>02</span>
+
+                </div>
+
+                <h3>
+                    Room Management
+                </h3>
+
+                <p>
+                    Manage hostel rooms, capacity and bed availability.
+                </p>
+
+                <div class="warden-service-link">
+                    Manage Rooms →
+                </div>
+
+            </a>
+
+
+            <a
+                href="leave-management.html"
+                class="warden-management-card"
+            >
+
+                <div class="warden-management-top">
+
+                    <div class="warden-management-icon">
+                        📝
+                    </div>
+
+                    <span>03</span>
+
+                </div>
+
+                <h3>
+                    Leave Management
+                </h3>
+
+                <p>
+                    Review, approve or reject student leave requests.
+                </p>
+
+                <div class="warden-service-link">
+                    Manage Leaves →
+                </div>
+
+            </a>
+
+
+            <a
+                href="complaint-management.html"
+                class="warden-management-card"
+            >
+
+                <div class="warden-management-top">
+
+                    <div class="warden-management-icon">
+                        📢
+                    </div>
+
+                    <span>04</span>
+
+                </div>
+
+                <h3>
+                    Complaint Management
+                </h3>
+
+                <p>
+                    Review and resolve student hostel complaints.
+                </p>
+
+                <div class="warden-service-link">
+                    Manage Complaints →
+                </div>
+
+            </a>
 
         </section>
 
     </main>
 
-    <footer>
-        <p>© 2026 Smart Hostel Management System</p>
+
+    <!-- Footer -->
+    <footer class="warden-dashboard-footer">
+
+        <p>
+            © 2026 Smart Hostel Management System
+        </p>
+
+        <p>
+            Warden Portal • Smart Hostel
+        </p>
+
     </footer>
 
-    
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
+
 </body>
 </html>

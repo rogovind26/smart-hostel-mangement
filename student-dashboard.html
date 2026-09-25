@@ -10,104 +10,302 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="student-dashboard-page">
 
-    <!-- Dashboard Header -->
-    <header class="dashboard-header">
+    <!-- ==============================
+         Dashboard Header
+         ============================== -->
 
-        <div>
-            <h1>🏠 Smart Hostel</h1>
-            <p>Student Dashboard</p>
-        </div>
+    <header class="student-dashboard-header">
 
-        <div class="student-info">
-            <span>👤 Student</span>
-            <a href="login.html">Logout</a>
+        <a href="student-dashboard.html" class="student-brand">
+
+            <div class="student-brand-icon">
+                🏠
+            </div>
+
+            <div>
+                <h1>Smart Hostel</h1>
+                <p>Student Portal</p>
+            </div>
+
+        </a>
+
+
+        <div class="student-header-actions">
+
+            <span class="student-role">
+                👤 Student
+            </span>
+
+            <a href="login.html" class="student-logout">
+                Logout
+            </a>
+
         </div>
 
     </header>
 
 
-    <!-- Main Dashboard -->
-    <main class="dashboard-container">
+    <!-- ==============================
+         Main Dashboard
+         ============================== -->
 
-        <div class="welcome-section">
-            <h2>Welcome, Student! 👋</h2>
-            <p>Manage your hostel activities from one place.</p>
+    <main class="student-dashboard-main">
+
+
+        <!-- Welcome -->
+
+        <section class="student-welcome">
+
+            <div>
+
+                <span class="welcome-badge">
+                    🎓 STUDENT PORTAL
+                </span>
+
+                <h2>
+                    Welcome back, Student! 👋
+                </h2>
+
+                <p>
+                    Manage your hostel activities,
+                    requests and services from one place.
+                </p>
+
+            </div>
+
+
+            <div class="welcome-icon">
+                🏠
+            </div>
+
+        </section>
+
+
+        <!-- Section Heading -->
+
+        <div class="student-section-heading">
+
+            <div>
+
+                <span>MY HOSTEL</span>
+
+                <h2>
+                    Hostel Services
+                </h2>
+
+            </div>
+
+            <p>
+                Choose a service to continue
+            </p>
+
         </div>
 
 
         <!-- Dashboard Cards -->
-        <section class="dashboard-cards">
 
-            <a href="my-room.html" class="dashboard-card management-link">
-
-    <div class="card-icon">🏠</div>
-
-    <h3>My Room</h3>
-
-    <p>View your room details</p>
-    <button>Room Detail</button>
-
-</a>
+        <section class="student-dashboard-grid">
 
 
-            <a href="leave-request.html" class="dashboard-card management-link">
+            <!-- My Room -->
 
-    <div class="card-icon">📋</div>
+            <a href="my-room.html"
+               class="student-service-card room-service">
 
-    <h3>Leave Request</h3>
+                <div class="service-top">
 
-    <p>Apply for hostel leave</p>
-    <button>Leave Apply</button>
+                    <div class="service-icon">
+                        🏠
+                    </div>
 
-</a>
+                    <span class="service-number">
+                        01
+                    </span>
 
-<a href="complaint.html" class="dashboard-card management-link">
+                </div>
 
-    <div class="card-icon">⚠️</div>
+                <h3>
+                    My Room
+                </h3>
 
-    <h3>Complaints</h3>
+                <p>
+                    View your room, bed and
+                    roommate details.
+                </p>
 
-    <p>Submit and track complaints</p>
-    
-    <button>View Complaint</button>
-</a>
+                <div class="service-link">
+                    Room Details →
+                </div>
 
-
-           <a href="fee-status.html" class="dashboard-card management-link">
-
-    <div class="card-icon">💰</div>
-
-    <h3>Fee Status</h3>
-
-    <p>View hostel fee status</p>
-    <button>View fee</button>
-
-</a>
+            </a>
 
 
-      <a href="mess.html" class="dashboard-card management-link">
+            <!-- Leave Request -->
 
-    <div class="card-icon">🍽️</div>
+            <a href="leave-request.html"
+               class="student-service-card leave-service">
 
-    <h3>Mess Management</h3>
+                <div class="service-top">
 
-    <p>Check today's mess menu</p>
-    <button>View Mess</button>
+                    <div class="service-icon">
+                        📋
+                    </div>
 
-</a>
+                    <span class="service-number">
+                        02
+                    </span>
+
+                </div>
+
+                <h3>
+                    Leave Request
+                </h3>
+
+                <p>
+                    Apply for hostel leave and
+                    check request status.
+                </p>
+
+                <div class="service-link">
+                    Apply Leave →
+                </div>
+
+            </a>
 
 
-           <a href="profile.html" class="dashboard-card management-link">
+            <!-- Complaints -->
 
-    <div class="card-icon">👤</div>
+            <a href="complaint.html"
+               class="student-service-card complaint-service">
 
-    <h3>My Profile</h3>
+                <div class="service-top">
 
-    <p>View and manage your profile</p>
-    <button>View Proflie</button>
-</a>
+                    <div class="service-icon">
+                        📢
+                    </div>
+
+                    <span class="service-number">
+                        03
+                    </span>
+
+                </div>
+
+                <h3>
+                    Complaints
+                </h3>
+
+                <p>
+                    Submit and track your
+                    hostel complaints.
+                </p>
+
+                <div class="service-link">
+                    View Complaints →
+                </div>
+
+            </a>
+
+
+            <!-- Fee Status -->
+
+            <a href="fee-status.html"
+               class="student-service-card fee-service">
+
+                <div class="service-top">
+
+                    <div class="service-icon">
+                        💰
+                    </div>
+
+                    <span class="service-number">
+                        04
+                    </span>
+
+                </div>
+
+                <h3>
+                    Fee Status
+                </h3>
+
+                <p>
+                    Check your hostel fee,
+                    payment and pending amount.
+                </p>
+
+                <div class="service-link">
+                    View Fee →
+                </div>
+
+            </a>
+
+
+            <!-- Mess -->
+
+            <a href="mess.html"
+               class="student-service-card mess-service">
+
+                <div class="service-top">
+
+                    <div class="service-icon">
+                        🍽️
+                    </div>
+
+                    <span class="service-number">
+                        05
+                    </span>
+
+                </div>
+
+                <h3>
+                    Mess Management
+                </h3>
+
+                <p>
+                    Check today's and weekly
+                    hostel mess menu.
+                </p>
+
+                <div class="service-link">
+                    View Mess →
+                </div>
+
+            </a>
+
+
+            <!-- Profile -->
+
+            <a href="profile.html"
+               class="student-service-card profile-service">
+
+                <div class="service-top">
+
+                    <div class="service-icon">
+                        👤
+                    </div>
+
+                    <span class="service-number">
+                        06
+                    </span>
+
+                </div>
+
+                <h3>
+                    My Profile
+                </h3>
+
+                <p>
+                    View your personal and
+                    hostel information.
+                </p>
+
+                <div class="service-link">
+                    View Profile →
+                </div>
+
+            </a>
+
 
         </section>
 
@@ -115,9 +313,19 @@
 
 
     <!-- Footer -->
-    <footer>
-        <p>© 2026 Smart Hostel Management System</p>
+
+    <footer class="student-dashboard-footer">
+
+        <p>
+            © 2026 Smart Hostel Management System
+        </p>
+
+        <p>
+            Student Portal • Smart Hostel
+        </p>
+
     </footer>
+
 
 </body>
 

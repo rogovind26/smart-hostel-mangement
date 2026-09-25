@@ -10,48 +10,91 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="management-page">
 
     <!-- Header -->
-    <header class="dashboard-header">
+    <header class="management-header">
 
-        <h1>🏠 Room Management</h1>
+        <a href="warden-dashboard.html" class="management-brand">
 
-        <div class="student-info">
+            <div class="management-brand-icon">🏠</div>
+
+            <div>
+                <h1>Smart Hostel</h1>
+                <p>Room Management</p>
+            </div>
+
+        </a>
+
+        <div class="management-header-actions">
+
             <span>👤 Warden</span>
-            <a href="warden-dashboard.html">Dashboard</a>
+
+            <a href="warden-dashboard.html">
+                Dashboard
+            </a>
+
         </div>
 
     </header>
 
 
-    <!-- Main Content -->
-    <main class="dashboard-container">
+    <!-- Main -->
+    <main class="management-main">
 
-        <!-- Welcome Section -->
-        <section class="welcome-section">
 
-            <h2>Manage Hostel Rooms</h2>
+        <!-- Welcome -->
+        <section class="management-welcome">
 
-            <p>
-                Add, search and manage hostel room information.
-            </p>
+            <div>
+
+                <span class="management-badge">
+                    🏢 ROOM MANAGEMENT
+                </span>
+
+                <h2>
+                    Manage Hostel Rooms
+                </h2>
+
+                <p>
+                    Add, search and manage hostel room information
+                    from one place.
+                </p>
+
+            </div>
+
+            <div class="management-welcome-icon">
+                🏢
+            </div>
 
         </section>
 
 
-        <!-- Add Room Button -->
-        <div class="management-actions">
+        <!-- Actions -->
+        <section class="management-toolbar">
 
-            <button onclick="showRoomForm()">
+            <div>
+
+                <span>ROOM DIRECTORY</span>
+
+                <h2>
+                    Room List
+                </h2>
+
+            </div>
+
+            <button
+                class="modern-add-button"
+                onclick="showRoomForm()"
+            >
                 ➕ Add New Room
             </button>
 
-        </div>
+        </section>
 
 
-        <!-- Search Room -->
-        <section class="search-section">
+        <!-- Search -->
+        <section class="modern-search-section">
 
             <input
                 type="text"
@@ -64,57 +107,131 @@
 
 
         <!-- Add Room Form -->
-        <section id="roomForm" class="student-form">
+        <section
+            id="roomForm"
+            class="modern-management-form"
+        >
 
-            <h2>Add New Room</h2>
+            <div class="form-heading">
+
+                <div>
+
+                    <span>ROOM DETAILS</span>
+
+                    <h2>Add New Room</h2>
+
+                </div>
+
+                <span class="form-icon">
+                    🏠
+                </span>
+
+            </div>
+
 
             <form id="addRoomForm">
 
-                <input
-                    type="text"
-                    id="roomNumber"
-                    placeholder="Room Number"
-                    required
-                >
+                <div class="form-grid">
 
-                <input
-                    type="number"
-                    id="roomCapacity"
-                    placeholder="Room Capacity"
-                    min="1"
-                    required
-                >
+                    <div class="form-group">
 
-                <input
-                    type="number"
-                    id="occupiedBeds"
-                    placeholder="Occupied Beds"
-                    min="0"
-                    required
-                >
+                        <label for="roomNumber">
+                            Room Number
+                        </label>
 
-                <button type="submit">
-                    Add Room
-                </button>
+                        <input
+                            type="text"
+                            id="roomNumber"
+                            placeholder="Example: 101"
+                            required
+                        >
 
-                <button
-                    type="button"
-                    onclick="hideRoomForm()"
-                >
-                    Cancel
-                </button>
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="roomCapacity">
+                            Room Capacity
+                        </label>
+
+                        <input
+                            type="number"
+                            id="roomCapacity"
+                            placeholder="Example: 2"
+                            min="1"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="occupiedBeds">
+                            Occupied Beds
+                        </label>
+
+                        <input
+                            type="number"
+                            id="occupiedBeds"
+                            placeholder="Example: 1"
+                            min="0"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-buttons">
+
+                    <button
+                        type="submit"
+                        class="save-management-button"
+                    >
+                        ✅ Add Room
+                    </button>
+
+                    <button
+                        type="button"
+                        class="cancel-management-button"
+                        onclick="hideRoomForm()"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
 
             </form>
 
         </section>
 
 
-        <!-- Room List -->
-        <section class="student-table-section">
+        <!-- Room Table -->
+        <section class="modern-table-section">
 
-            <h2>Room List</h2>
+            <div class="table-heading">
 
-            <div class="table-container">
+                <div>
+
+                    <span>HOSTEL ROOMS</span>
+
+                    <h2>
+                        All Rooms
+                    </h2>
+
+                </div>
+
+                <div class="table-heading-icon">
+                    🛏️
+                </div>
+
+            </div>
+
+
+            <div class="modern-table-container">
 
                 <table id="roomTable">
 
@@ -133,7 +250,6 @@
 
                     <tbody id="roomTableBody">
 
-                       
                     </tbody>
 
                 </table>
@@ -146,10 +262,14 @@
 
 
     <!-- Footer -->
-    <footer>
+    <footer class="management-footer">
 
         <p>
             © 2026 Smart Hostel Management System
+        </p>
+
+        <p>
+            Warden Portal • Room Management
         </p>
 
     </footer>

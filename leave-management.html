@@ -10,38 +10,88 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="management-page">
 
     <!-- Header -->
-    <header class="dashboard-header">
+    <header class="management-header">
 
-        <h1>📋 Leave Management</h1>
+        <a href="warden-dashboard.html" class="management-brand">
 
-        <div class="student-info">
+            <div class="management-brand-icon">
+                📋
+            </div>
+
+            <div>
+                <h1>Smart Hostel</h1>
+                <p>Leave Management</p>
+            </div>
+
+        </a>
+
+
+        <div class="management-header-actions">
+
             <span>👤 Warden</span>
-            <a href="warden-dashboard.html">Dashboard</a>
+
+            <a href="warden-dashboard.html">
+                Dashboard
+            </a>
+
         </div>
 
     </header>
 
 
-    <!-- Main Content -->
-    <main class="dashboard-container">
+    <!-- Main -->
+    <main class="management-main">
 
-        <!-- Welcome Section -->
-        <section class="welcome-section">
 
-            <h2>Manage Leave Requests</h2>
+        <!-- Welcome -->
+        <section class="management-welcome">
 
-            <p>
-                Review and manage student leave requests.
-            </p>
+            <div>
+
+                <span class="management-badge">
+                    📋 LEAVE MANAGEMENT
+                </span>
+
+                <h2>
+                    Manage Leave Requests
+                </h2>
+
+                <p>
+                    Review, approve and manage student leave
+                    requests from one place.
+                </p>
+
+            </div>
+
+
+            <div class="management-welcome-icon">
+                📝
+            </div>
+
+        </section>
+
+
+        <!-- Leave Directory -->
+        <section class="management-toolbar">
+
+            <div>
+
+                <span>LEAVE DIRECTORY</span>
+
+                <h2>
+                    Leave Requests
+                </h2>
+
+            </div>
 
         </section>
 
 
         <!-- Search -->
-        <section class="search-section">
+        <section class="modern-search-section">
 
             <input
                 type="text"
@@ -53,32 +103,57 @@
         </section>
 
 
-        <!-- Leave Requests -->
-        <section class="student-table-section">
+        <!-- Leave Table -->
+        <section class="modern-table-section">
 
-            <h2>Leave Requests</h2>
+            <div class="table-heading">
 
-            <div class="table-container">
+                <div>
+
+                    <span>STUDENT REQUESTS</span>
+
+                    <h2>
+                        All Leave Requests
+                    </h2>
+
+                </div>
+
+                <div class="table-heading-icon">
+                    📋
+                </div>
+
+            </div>
+
+
+            <div class="modern-table-container">
 
                 <table id="leaveTable">
 
                     <thead>
 
                         <tr>
+
                             <th>Student ID</th>
+
                             <th>Student Name</th>
+
                             <th>Leave Date</th>
+
                             <th>Return Date</th>
+
                             <th>Reason</th>
+
                             <th>Status</th>
+
                             <th>Action</th>
+
                         </tr>
 
                     </thead>
 
+
                     <tbody id="leaveTableBody">
 
-                        
                     </tbody>
 
                 </table>
@@ -91,127 +166,132 @@
 
 
     <!-- Footer -->
-    <footer>
+    <footer class="management-footer">
 
         <p>
             © 2026 Smart Hostel Management System
         </p>
 
+        <p>
+            Warden Portal • Leave Management
+        </p>
+
     </footer>
 
 
-<script>
+    <!-- Leave Management JavaScript -->
+    <script>
 
-function loadWardenLeaves() {
+        function loadWardenLeaves() {
 
-    const leaves =
-        JSON.parse(localStorage.getItem("leaves")) || [];
+            const leaves =
+                JSON.parse(localStorage.getItem("leaves")) || [];
 
-    const tableBody =
-        document.getElementById("leaveTableBody");
+            const tableBody =
+                document.getElementById("leaveTableBody");
 
-    if (!tableBody) {
-        return;
-    }
+            if (!tableBody) {
+                return;
+            }
 
-    tableBody.innerHTML = "";
+            tableBody.innerHTML = "";
 
-    leaves.forEach(function(leave, index) {
+            leaves.forEach(function(leave, index) {
 
-        const row =
-            document.createElement("tr");
+                const row =
+                    document.createElement("tr");
 
-        row.innerHTML = `
-            <td>${leave.studentId || "-"}</td>
+                row.innerHTML = `
+                    <td>${leave.studentId || "-"}</td>
 
-            <td>${leave.studentName || "-"}</td>
+                    <td>${leave.studentName || "-"}</td>
 
-            <td>${leave.fromDate || "-"}</td>
+                    <td>${leave.fromDate || "-"}</td>
 
-            <td>${leave.toDate || "-"}</td>
+                    <td>${leave.toDate || "-"}</td>
 
-            <td>${leave.reason || "-"}</td>
+                    <td>${leave.reason || "-"}</td>
 
-            <td class="leave-status">
-                ${leave.status || "🟡 Pending"}
-            </td>
+                    <td class="leave-status">
+                        ${leave.status || "🟡 Pending"}
+                    </td>
 
-            <td>
+                    <td>
 
-                <button
-                    class="approve-btn"
-                    onclick="approveLeave(${index})">
-                    ✅ Approve
-                </button>
+                        <button
+                            class="approve-btn"
+                            onclick="approveLeave(${index})">
+                            ✅ Approve
+                        </button>
 
-                <button
-                    class="reject-btn"
-                    onclick="rejectLeave(${index})">
-                    ❌ Reject
-                </button>
+                        <button
+                            class="reject-btn"
+                            onclick="rejectLeave(${index})">
+                            ❌ Reject
+                        </button>
 
-            </td>
-        `;
+                    </td>
+                `;
 
-        tableBody.appendChild(row);
-    });
-}
-
-
-// ==============================
-// Approve Leave
-// ==============================
-
-function approveLeave(index) {
-
-    let leaves =
-        JSON.parse(localStorage.getItem("leaves")) || [];
-
-    if (!leaves[index]) {
-        return;
-    }
-
-    leaves[index].status =
-        "🟢 Approved";
-
-    localStorage.setItem(
-        "leaves",
-        JSON.stringify(leaves)
-    );
-
-    loadWardenLeaves();
-}
+                tableBody.appendChild(row);
+            });
+        }
 
 
-// ==============================
-// Reject Leave
-// ==============================
+        // ==============================
+        // Approve Leave
+        // ==============================
 
-function rejectLeave(index) {
+        function approveLeave(index) {
 
-    let leaves =
-        JSON.parse(localStorage.getItem("leaves")) || [];
+            let leaves =
+                JSON.parse(localStorage.getItem("leaves")) || [];
 
-    if (!leaves[index]) {
-        return;
-    }
+            if (!leaves[index]) {
+                return;
+            }
 
-    leaves[index].status =
-        "🔴 Rejected";
+            leaves[index].status =
+                "🟢 Approved";
 
-    localStorage.setItem(
-        "leaves",
-        JSON.stringify(leaves)
-    );
+            localStorage.setItem(
+                "leaves",
+                JSON.stringify(leaves)
+            );
 
-    loadWardenLeaves();
-}
+            loadWardenLeaves();
+        }
 
 
-// Load leaves when page opens
-loadWardenLeaves();
+        // ==============================
+        // Reject Leave
+        // ==============================
 
-</script>
+        function rejectLeave(index) {
+
+            let leaves =
+                JSON.parse(localStorage.getItem("leaves")) || [];
+
+            if (!leaves[index]) {
+                return;
+            }
+
+            leaves[index].status =
+                "🔴 Rejected";
+
+            localStorage.setItem(
+                "leaves",
+                JSON.stringify(leaves)
+            );
+
+            loadWardenLeaves();
+        }
+
+
+        // Load leaves when page opens
+        loadWardenLeaves();
+
+    </script>
 
 </body>
 

@@ -10,104 +10,201 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+
+<body class="student-page">
+
 
     <!-- Header -->
-    <header class="dashboard-header">
+    <header class="student-inner-header">
 
-        <h1>📢 My Complaints</h1>
+        <a href="student-dashboard.html" class="student-inner-brand">
 
-        <div class="student-info">
+            <div class="student-inner-brand-icon">
+                📢
+            </div>
+
+            <div>
+                <h1>Smart Hostel</h1>
+                <p>My Complaints</p>
+            </div>
+
+        </a>
+
+
+        <div class="student-inner-actions">
+
             <span>👨‍🎓 Student</span>
-            <a href="student-dashboard.html">Dashboard</a>
+
+            <a href="student-dashboard.html">
+                Dashboard
+            </a>
+
         </div>
 
     </header>
 
 
+
     <!-- Main Content -->
-    <main class="dashboard-container">
+    <main class="student-inner-main">
 
-        <!-- Welcome Section -->
-        <section class="welcome-section">
 
-            <h2>Submit a Complaint 📝</h2>
+        <!-- Welcome -->
+        <section class="student-inner-welcome">
 
-            <p>
-                Report any hostel problem to the warden.
-            </p>
+            <div>
+
+                <span class="student-inner-badge">
+                    📢 COMPLAINTS
+                </span>
+
+                <h2>
+                    Report a Hostel Problem
+                </h2>
+
+                <p>
+                    Submit your complaint to the hostel warden
+                    and track its status.
+                </p>
+
+            </div>
+
+
+            <div class="student-inner-welcome-icon">
+                📝
+            </div>
 
         </section>
 
 
-        <!-- Complaint Form -->
-        <section class="complaint-form-card">
 
-            <h2>📝 Complaint Form</h2>
+        <!-- Complaint Form -->
+        <section class="student-info-card">
+
+
+            <div class="student-info-card-heading">
+
+                <div>
+
+                    <span>NEW COMPLAINT</span>
+
+                    <h2>
+                        📝 Complaint Form
+                    </h2>
+
+                </div>
+
+
+                <div class="student-info-card-icon">
+                    📢
+                </div>
+
+            </div>
+
+
 
             <form id="complaintForm">
 
-                <div class="form-group">
 
-                    <label for="complaintSubject">
-                        Complaint Subject
-                    </label>
+                <div class="student-complaint-form-grid">
 
-                    <input
-                        type="text"
-                        id="complaintSubject"
-                        placeholder="Example: Fan not working"
-                        required
-                    >
+
+                    <!-- Subject -->
+                    <div class="student-form-group">
+
+                        <label for="complaintSubject">
+                            Complaint Subject
+                        </label>
+
+                        <input
+                            type="text"
+                            id="complaintSubject"
+                            placeholder="Example: Fan not working"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Description -->
+                    <div class="student-form-group student-form-full">
+
+                        <label for="complaintDescription">
+                            Complaint Description
+                        </label>
+
+                        <textarea
+                            id="complaintDescription"
+                            rows="5"
+                            placeholder="Describe your problem..."
+                            required
+                        ></textarea>
+
+                    </div>
+
 
                 </div>
 
-
-                <div class="form-group full-width">
-
-                    <label for="complaintDescription">
-                        Complaint Description
-                    </label>
-
-                    <textarea
-                        id="complaintDescription"
-                        rows="5"
-                        placeholder="Describe your problem..."
-                        required
-                    ></textarea>
-
-                </div>
 
 
                 <button
                     type="submit"
-                    class="complaint-submit-btn"
+                    class="student-complaint-submit-btn"
                 >
                     📤 Submit Complaint
                 </button>
 
+
             </form>
 
+
             <p id="complaintMessage"></p>
+
 
         </section>
 
 
+
         <!-- Complaint History -->
-        <section class="complaint-history-card">
+        <section class="student-info-card">
 
-            <h2>📋 My Complaint History</h2>
 
-            <div class="table-container">
+            <div class="student-info-card-heading">
+
+                <div>
+
+                    <span>COMPLAINT HISTORY</span>
+
+                    <h2>
+                        📋 My Complaint History
+                    </h2>
+
+                </div>
+
+
+                <div class="student-info-card-icon">
+                    📋
+                </div>
+
+            </div>
+
+
+
+            <div class="student-complaint-table-container">
 
                 <table id="myComplaintTable">
 
                     <thead>
 
                         <tr>
+
                             <th>Subject</th>
+
                             <th>Description</th>
+
                             <th>Status</th>
+
                         </tr>
 
                     </thead>
@@ -115,27 +212,33 @@
 
                     <tbody id="myComplaintTableBody">
 
-                        
-
                     </tbody>
 
                 </table>
 
             </div>
 
+
         </section>
+
 
     </main>
 
 
+
     <!-- Footer -->
-    <footer>
+    <footer class="student-inner-footer">
 
         <p>
             © 2026 Smart Hostel Management System
         </p>
 
+        <p>
+            Student Portal • Complaint Management
+        </p>
+
     </footer>
+
 
 
     <script src="script.js"></script>

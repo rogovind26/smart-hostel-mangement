@@ -11,94 +11,222 @@
     <script src="script.js"></script>
 </head>
 
-<body>
+<body class="student-page">
 
     <!-- Header -->
-    <header class="dashboard-header">
+    <header class="student-inner-header">
 
-        <h1>👤 My Profile</h1>
+        <a href="student-dashboard.html" class="student-inner-brand">
 
-        <div class="student-info">
+            <div class="student-inner-brand-icon">
+                👤
+            </div>
+
+            <div>
+                <h1>Smart Hostel</h1>
+                <p>My Profile</p>
+            </div>
+
+        </a>
+
+        <div class="student-inner-actions">
+
             <span>👨‍🎓 Student</span>
-            <a href="student-dashboard.html">Dashboard</a>
+
+            <a href="student-dashboard.html">
+                Dashboard
+            </a>
+
         </div>
 
     </header>
 
 
     <!-- Main Content -->
-    <main class="dashboard-container">
+    <main class="student-inner-main">
 
-        <!-- Profile Welcome -->
-        <section class="welcome-section">
+        <!-- Welcome Section -->
+        <section class="student-inner-welcome">
 
-            <h2>My Profile 👨‍🎓</h2>
+            <div>
 
-            <p>
-                View your personal and hostel information.
-            </p>
+                <span class="student-inner-badge">
+                    STUDENT PROFILE
+                </span>
+
+                <h2>My Profile 👨‍🎓</h2>
+
+                <p>
+                    View your personal and hostel information.
+                </p>
+
+            </div>
+
+            <div class="student-inner-welcome-icon">
+                👨‍🎓
+            </div>
 
         </section>
 
 
         <!-- Profile Information -->
-        <section class="profile-card">
+        <section class="student-info-card">
 
-            <div class="profile-header">
-                <div class="profile-icon">👨‍🎓</div>
+            <!-- Profile Header -->
+            <div class="student-profile-top">
 
-                <div>
-                    <h2>Rahul Kumar</h2>
-                    <p>Student ID: STU001</p>
+                <div class="student-profile-avatar">
+                    👨‍🎓
                 </div>
+
+                <div class="student-profile-heading">
+
+                    <h2 >
+                        Rahul Kumar
+                    </h2>
+
+                    <p>
+                        Student ID:
+                        <strong >
+                            STU001
+                        </strong>
+                    </p>
+
+                </div>
+
+                <div class="student-profile-status">
+                    🟢 Active
+                </div>
+
             </div>
 
 
-            <div class="profile-grid">
+            <!-- Personal Information -->
+            <div class="student-profile-section-title">
 
-                <div class="profile-item">
+                <span>
+                    👤 PERSONAL INFORMATION
+                </span>
+
+                <h3>Personal Details</h3>
+
+            </div>
+
+
+            <div class="student-profile-grid">
+
+                <div class="student-profile-item">
+
                     <span>👤 Full Name</span>
-                    <strong id="profileStudentName">Rahul Kumar</strong>
+
+                    <strong id="profileStudentName">
+                        Rahul Kumar
+                    </strong>
+
                 </div>
 
-                <div class="profile-item">
+
+                <div class="student-profile-item">
+
                     <span>🆔 Student ID</span>
-                    <strong id="profileStudentId">STU001</strong>
+
+                    <strong id="profileStudentId">
+                        STU001
+                    </strong>
+
                 </div>
 
-                <div class="profile-item">
+
+                <div class="student-profile-item">
+
                     <span>📧 Email</span>
-                    <strong id="profileStudentEmail">rahul@hostel.com</strong>
+
+                    <strong id="profileStudentEmail">
+                        rahul@hostel.com
+                    </strong>
+
                 </div>
 
-                <div class="profile-item">
+
+                <div class="student-profile-item">
+
                     <span>📱 Phone</span>
-                    <strong id="profileStudentPhone">9876543210</strong>
+
+                    <strong id="profileStudentPhone">
+                        9876543210
+                    </strong>
+
                 </div>
 
-                <div class="profile-item">
+
+                <div class="student-profile-item">
+
                     <span>🎓 Course</span>
-                    <strong id="profileStudentCourse">B.Tech CSE</strong>
+
+                    <strong id="profileStudentCourse">
+                        B.Tech CSE
+                    </strong>
+
                 </div>
 
-                <div class="profile-item">
+
+                <div class="student-profile-item">
+
                     <span>📅 Admission Year</span>
-                    <strong id="profileAdmissionYear">2024</strong>
+
+                    <strong id="profileAdmissionYear">
+                        2024
+                    </strong>
+
                 </div>
 
-                <div class="profile-item">
+            </div>
+
+
+            <!-- Hostel Information -->
+            <div class="student-profile-section-title hostel-profile-title">
+
+                <span>
+                    🏠 HOSTEL INFORMATION
+                </span>
+
+                <h3>Room Details</h3>
+
+            </div>
+
+
+            <div class="student-profile-grid">
+
+                <div class="student-profile-item">
+
                     <span>🏠 Room Number</span>
-                   <strong id="profileStudentRoom">101</strong>
+
+                    <strong id="profileStudentRoom">
+                        101
+                    </strong>
+
                 </div>
 
-                <div class="profile-item">
+
+                <div class="student-profile-item">
+
                     <span>🛏️ Bed Number</span>
-                    <strong id="profileStudentBed">1</strong>
+
+                    <strong id="profileStudentBed">
+                        1
+                    </strong>
+
                 </div>
 
-                <div class="profile-item">
+
+                <div class="student-profile-item">
+
                     <span>🏢 Hostel Block</span>
-                    <strong id="profileStudentBlock">Block A</strong>
+
+                    <strong id="profileStudentBlock">
+                        Block A
+                    </strong>
+
                 </div>
 
             </div>
@@ -107,13 +235,23 @@
 
 
         <!-- Account Status -->
-        <section class="profile-status">
+        <section class="student-profile-status-card">
 
-            <h3>✅ Account Status</h3>
+            <div class="student-profile-status-icon">
+                ✅
+            </div>
 
-            <p>
-                Your student account is active and verified.
-            </p>
+            <div>
+
+                <span>ACCOUNT STATUS</span>
+
+                <h3>Account Active & Verified</h3>
+
+                <p>
+                    Your student account is active and verified.
+                </p>
+
+            </div>
 
         </section>
 
@@ -121,7 +259,7 @@
 
 
     <!-- Footer -->
-    <footer>
+    <footer class="student-inner-footer">
 
         <p>
             © 2026 Smart Hostel Management System
